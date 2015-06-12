@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1V-UJ-fv1">
+                                <rect key="frame" x="36" y="417" width="248" height="85"/>
+                                <state key="normal" title="Button" image="start.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BUj-kM-nEE" kind="show" id="3cx-bs-Vyy"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="与えられた問題が「○」か「☓」かを選んで下さい。すべての問題に答え終わると、あなたの「一般常識レベル」が表示されます。" translatesAutoresizingMaskIntoConstraints="NO" id="whd-Vr-1eA">
+                                <rect key="frame" x="40" y="90" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="一般常識度クイズ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pN-tz-qPe">
+                                <rect key="frame" x="33" y="30" width="255" height="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58966028690000005" green="0.8227584362" blue="0.54301697019999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="324"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="H7m-Go-mtN">
+            <objects>
+                <viewController id="BUj-kM-nEE" customClass="QuizViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8m0-u4-zf7"/>
+                        <viewControllerLayoutGuide type="bottom" id="QEt-G2-kfT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TLH-RG-UNz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kyujo.png" translatesAutoresizingMaskIntoConstraints="NO" id="7NL-T2-xNe">
+                                <rect key="frame" x="-5" y="42" width="325" height="526"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kyujo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="fwT-Gu-1i3">
+                                <rect key="frame" x="-5" y="42" width="325" height="526"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kyujo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="2vw-ef-8Ms">
+                                <rect key="frame" x="-5" y="42" width="325" height="526"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kyujo3.png" translatesAutoresizingMaskIntoConstraints="NO" id="l54-Xu-pJq">
+                                <rect key="frame" x="-5" y="42" width="325" height="526"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="問題文" translatesAutoresizingMaskIntoConstraints="NO" id="LtN-I0-zAN">
+                                <rect key="frame" x="37" y="123" width="240" height="104"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRD-48-CKy">
+                                <rect key="frame" x="57" y="408" width="200" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="choiceAnswer:" destination="BUj-kM-nEE" eventType="touchUpInside" id="5hO-bZ-b6T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7F-Li-K3q">
+                                <rect key="frame" x="37" y="331" width="240" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="choiceAnswer:" destination="BUj-kM-nEE" eventType="touchUpInside" id="hEt-q9-5gp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kki-U3-jv0">
+                                <rect key="frame" x="39" y="248" width="242" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="choiceAnswer:" destination="BUj-kM-nEE" eventType="touchUpInside" id="GTb-ox-p5W"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="out0.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eob-Yk-blX">
+                                <rect key="frame" x="204" y="505" width="111" height="55"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="out1.png" translatesAutoresizingMaskIntoConstraints="NO" id="0u6-Zj-7FY">
+                                <rect key="frame" x="204" y="505" width="111" height="55"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="out2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Otp-7u-gAr">
+                                <rect key="frame" x="204" y="505" width="111" height="55"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="out3.png" translatesAutoresizingMaskIntoConstraints="NO" id="gIe-Am-QcY">
+                                <rect key="frame" x="204" y="505" width="111" height="55"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="first" destination="fwT-Gu-1i3" id="buI-Zw-0Sf"/>
+                        <outlet property="home" destination="7NL-T2-xNe" id="Jf3-xO-fCU"/>
+                        <outlet property="out0" destination="Eob-Yk-blX" id="Z4t-bh-thB"/>
+                        <outlet property="out1" destination="0u6-Zj-7FY" id="pSU-S8-tqq"/>
+                        <outlet property="out2" destination="Otp-7u-gAr" id="vAg-W9-KkQ"/>
+                        <outlet property="out3" destination="gIe-Am-QcY" id="3dp-uh-Sd1"/>
+                        <outlet property="quizTextView" destination="LtN-I0-zAN" id="dPw-Tb-PaB"/>
+                        <outlet property="second" destination="2vw-ef-8Ms" id="hS3-d9-sQa"/>
+                        <outlet property="third" destination="l54-Xu-pJq" id="rAS-yn-SOc"/>
+                        <outletCollection property="choiceButtons" destination="kki-U3-jv0" collectionClass="NSMutableArray" id="Obq-c2-Etx"/>
+                        <outletCollection property="choiceButtons" destination="n7F-Li-K3q" collectionClass="NSMutableArray" id="cuU-NB-ZaR"/>
+                        <outletCollection property="choiceButtons" destination="MRD-48-CKy" collectionClass="NSMutableArray" id="OAc-et-Tnf"/>
+                        <segue destination="owP-hA-BJF" kind="show" identifier="toResultView" id="xvM-JA-bwI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wtn-0m-iER" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436" y="342"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="Xls-aW-LT9">
+            <objects>
+                <viewController id="owP-hA-BJF" customClass="ResultViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CGa-op-trb"/>
+                        <viewControllerLayoutGuide type="bottom" id="0hd-0x-rIo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e0S-fw-p1e">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVm-43-FgZ">
+                                <rect key="frame" x="106" y="117" width="131" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="正解" translatesAutoresizingMaskIntoConstraints="NO" id="LeJ-dO-dUb">
+                                <rect key="frame" x="40" y="42" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFZ-sc-chv">
+                                <rect key="frame" x="114" y="482" width="105" height="30"/>
+                                <state key="normal" title="タイトルへ戻る">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="7Sn-tT-yQ1"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Shi-Es-Xds">
+                                <rect key="frame" x="44" y="157" width="232" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Su-nB-RJa">
+                                <rect key="frame" x="74" y="200" width="172" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58966028690000005" green="0.8227584362" blue="0.54301697019999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Shi-Es-Xds"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="resultTextView" destination="LeJ-dO-dUb" id="I75-Ax-IP7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QhB-CX-kcE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125" y="387"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kyujo.png" width="2096" height="2129"/>
+        <image name="kyujo1.png" width="2096" height="2129"/>
+        <image name="kyujo2.png" width="2096" height="2129"/>
+        <image name="kyujo3.png" width="2096" height="2129"/>
+        <image name="out0.png" width="640" height="280"/>
+        <image name="out1.png" width="640" height="280"/>
+        <image name="out2.png" width="640" height="280"/>
+        <image name="out3.png" width="640" height="280"/>
+        <image name="start.png" width="309" height="126"/>
+    </resources>
+</document>
